@@ -1,3 +1,4 @@
+// src/models/vehicle.model.js
 const mongoose = require("mongoose");
 
 const VehicleSchema = new mongoose.Schema(
@@ -27,9 +28,9 @@ const VehicleSchema = new mongoose.Schema(
 
     booking: {
       isBooked: { type: Boolean, default: false },
-      rentalId: { type: mongoose.Schema.Types.ObjectId, default: null },
-      riderId: { type: mongoose.Schema.Types.ObjectId, default: null },
-      bookedAt: { type: Date, default: null },
+      rentalId: { type: mongoose.Schema.Types.ObjectId },
+      riderId: { type: mongoose.Schema.Types.ObjectId },
+      bookedAt: { type: Date },
     },
   },
   { timestamps: true }

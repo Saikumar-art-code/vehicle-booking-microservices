@@ -3,7 +3,16 @@ const VehicleController = require("../controllers/vehicle.controller");
 
 const router = express.Router();
 
-router.post("/", VehicleController.create);
-router.get("/available", VehicleController.listAvailable);
+// create vehicle
+router.post("/", VehicleController.createVehicle);
 
-module.exports = router; // ✅ THIS LINE IS CRITICAL
+// get vehicle by id
+router.get("/:id", VehicleController.getVehicle);
+
+// booking phase-1 (assign booking)
+router.post("/:id/assign", VehicleController.assignBooking);
+
+// booking phase-2 (deploy vehicle)
+router.post("/:id/deploy", VehicleController.deploy);
+
+module.exports = router;

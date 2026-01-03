@@ -8,5 +8,6 @@ router.post("/signup", RiderController.signup);
 
 // login
 router.post("/login", RiderController.login);
+router.post("/assign-rental", RiderController.assignRental);
 
 module.exports = router;

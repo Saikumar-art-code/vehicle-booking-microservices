@@ -36,8 +36,8 @@ const RentalSchema = new mongoose.Schema(
 
     status: {
       type: String,
-      enum: ["ACTIVE", "ENDED"],
-      default: "ACTIVE",
+      enum: ["RIDER_ASSIGNED", "ACTIVE", "ENDED"],
+      default: "RIDER_ASSIGNED",
     },
 
     bookingAmount: {
