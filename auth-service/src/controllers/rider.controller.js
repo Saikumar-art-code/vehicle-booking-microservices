@@ -49,6 +49,25 @@ class RiderController {
       next(err);
     }
   }
+  static async assignRental(req, res, next) {
+    try {
+      const { riderId, rentalId, plan } = req.body;
+
+      const rider = await Rider.findByIdAndUpdate(
+        riderId,
+        {
+          rentalId,
+          currentRentalPlan: plan,
+          isActiveRental: false,
+        },
+        { new: true }
+      );
+
+      res.json({ status: true, data: rider });
+    } catch (err) {
+      next(err);
+    }
+  }
 }
 
 module.exports = RiderController;
