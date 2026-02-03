@@ -11,7 +11,7 @@ class BookingService {
     });
 
     if (existingRental) {
-      throw new Error("Rider already has an active rental");
+      throw new Error("Rider already has an active rental");ove
     }
 
     // 1️⃣ get vehicle

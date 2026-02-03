@@ -1,5 +1,5 @@
 const express = require("express");
-
+// const bcrypt = require("bcrypt");
 const riderRoutes = require("./routes/rider.routes");
 const errorHandler = require("./middleware/error");
 
